@@ -1,6 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+<<<<<<< Updated upstream
+=======
+import { RouterModule } from '@angular/router'; 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import { MatToolbarModule } from '@angular/material';
+>>>>>>> Stashed changes
+
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from '../app/Components/about/about.component';
@@ -21,6 +29,10 @@ import { VenueDetailsComponent } from './/components/venue-details/venue-details
 import { VenueEditComponent } from './/components/venue-edit/venue-edit.component';
 import { VenueHomeListallComponent } from './/components/venue-home-listall/venue-home-listall.component';
 import { AuthService } from './services/auth.service';
+
+const routes = [
+  {path: 'register', component: RegisterComponent}
+];
 
 @NgModule({
   declarations: [
@@ -45,7 +57,16 @@ import { AuthService } from './services/auth.service';
   ],
   imports: [
     BrowserModule,
+<<<<<<< Updated upstream
     AppRoutingModule
+=======
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatToolbarModule,
+>>>>>>> Stashed changes
   ],
   providers: [
     AuthService
