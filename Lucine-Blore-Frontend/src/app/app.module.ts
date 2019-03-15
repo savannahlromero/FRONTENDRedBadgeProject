@@ -3,23 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { ContactComponent } from './contact/contact.component';
-import { RegisterComponent } from './register/register.component';
-import { ReviewDeleteComponent } from './review-delete/review-delete.component';
-import { ReviewDetailComponent } from './review-detail/review-detail.component';
-import { ReviewEditComponent } from './review-edit/review-edit.component';
-import { ReviewHomeListallComponent } from './review-home-listall/review-home-listall.component';
-import { TransactionCreateComponent } from './transaction-create/transaction-create.component';
-import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
-import { TransactionHomeListallComponent } from './transaction-home-listall/transaction-home-listall.component';
-import { VenueCreateComponent } from './venue-create/venue-create.component';
-import { VenueDeleteComponent } from './venue-delete/venue-delete.component';
-import { VenueDetailsComponent } from './venue-details/venue-details.component';
-import { VenueEditComponent } from './venue-edit/venue-edit.component';
-import { VenueHomeListallComponent } from './venue-home-listall/venue-home-listall.component';
+import { AboutComponent } from '../app/Components/about/about.component';
+import { HomeComponent } from './/components/home/home.component';
+import { LoginComponent } from './/components/login/login.component';
+import { ContactComponent } from './/components/contact/contact.component';
+import { RegisterComponent } from './/components/register/register.component';
+import { ReviewDeleteComponent } from './/components/review-delete/review-delete.component';
+import { ReviewDetailComponent } from './/components/review-detail/review-detail.component';
+import { ReviewEditComponent } from './/components/review-edit/review-edit.component';
+import { ReviewHomeListallComponent } from './/components/review-home-listall/review-home-listall.component';
+import { TransactionCreateComponent } from './/components/transaction-create/transaction-create.component';
+import { TransactionDetailComponent } from './/components/transaction-detail/transaction-detail.component';
+import { TransactionHomeListallComponent } from './/components/transaction-home-listall/transaction-home-listall.component';
+import { VenueCreateComponent } from './/components/venue-create/venue-create.component';
+import { VenueDeleteComponent } from './/components/venue-delete/venue-delete.component';
+import { VenueDetailsComponent } from './/components/venue-details/venue-details.component';
+import { VenueEditComponent } from './/components/venue-edit/venue-edit.component';
+import { VenueHomeListallComponent } from './/components/venue-home-listall/venue-home-listall.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { VenueHomeListallComponent } from './venue-home-listall/venue-home-lista
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
