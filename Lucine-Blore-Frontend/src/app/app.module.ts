@@ -1,24 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-<<<<<<< Updated upstream
-=======
 import { RouterModule } from '@angular/router'; 
-<<<<<<< Updated upstream
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import { MatToolbarModule } from '@angular/material';
->>>>>>> Stashed changes
-=======
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { 
 MatToolbarModule,
 MatFormFieldModule,
 MatInputModule 
 } from '@angular/material';
->>>>>>> Stashed changes
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from '../app/Components/about/about.component';
@@ -69,22 +61,15 @@ const routes = [
   ],
   imports: [
     BrowserModule,
-<<<<<<< Updated upstream
-    AppRoutingModule
-=======
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     MatToolbarModule,
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
->>>>>>> Stashed changes
   ],
   providers: [
     AuthService
