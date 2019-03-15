@@ -13,14 +13,18 @@ export class RegisterComponent implements OnInit {
   constructor(private _form: FormBuilder) { }
 
   ngOnInit() {
+    this.createForm()
   }
 
   createForm(){
     this._registerForm = this._form.group({
-      email: new  FormControl,
+      email: new FormControl,
       password: new FormControl,
       confirmPassword: new FormControl
     });
+  }
+  onSubmit(){
+    console.log(this._registerForm.value);
   }
 
 }

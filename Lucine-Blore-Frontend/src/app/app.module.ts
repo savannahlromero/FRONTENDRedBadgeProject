@@ -3,9 +3,19 @@ import { NgModule } from '@angular/core';
 <<<<<<< Updated upstream
 =======
 import { RouterModule } from '@angular/router'; 
+<<<<<<< Updated upstream
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material';
+>>>>>>> Stashed changes
+=======
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { 
+MatToolbarModule,
+MatFormFieldModule,
+MatInputModule 
+} from '@angular/material';
 >>>>>>> Stashed changes
 
 import {HttpClientModule} from '@angular/common/http';
@@ -29,6 +39,7 @@ import { VenueDetailsComponent } from './/components/venue-details/venue-details
 import { VenueEditComponent } from './/components/venue-edit/venue-edit.component';
 import { VenueHomeListallComponent } from './/components/venue-home-listall/venue-home-listall.component';
 import { AuthService } from './services/auth.service';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes = [
   {path: 'register', component: RegisterComponent}
@@ -53,7 +64,8 @@ const routes = [
     VenueDeleteComponent,
     VenueDetailsComponent,
     VenueEditComponent,
-    VenueHomeListallComponent
+    VenueHomeListallComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +78,12 @@ const routes = [
     AppRoutingModule,
     HttpClientModule,
     MatToolbarModule,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
 >>>>>>> Stashed changes
   ],
   providers: [
