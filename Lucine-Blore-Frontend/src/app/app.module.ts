@@ -34,7 +34,10 @@ import { AuthService } from './services/auth.service';
 import { HeaderComponent } from './components/header/header.component';
 
 const routes = [
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
+  {path: '**', component: RegisterComponent}
+
 ];
 
 @NgModule({
