@@ -32,6 +32,9 @@ import { VenueEditComponent } from './/components/venue-edit/venue-edit.componen
 import { VenueHomeListallComponent } from './/components/venue-home-listall/venue-home-listall.component';
 import { AuthService } from './services/auth.service';
 import { HeaderComponent } from './components/header/header.component';
+import { ReviewService } from './services/reviewservice';
+import { TransactionService } from './services/transactionservice';
+import { VenueService } from './services/venueservice';
 
 const routes = [
   {path: 'register', component: RegisterComponent},
@@ -75,7 +78,11 @@ const routes = [
     BrowserAnimationsModule,
   ],
   providers: [
-    AuthService
+    AuthService,
+    ReviewService,
+    TransactionService,
+    VenueService
+
   ],
   bootstrap: [AppComponent]
 })
