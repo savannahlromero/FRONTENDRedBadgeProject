@@ -13,8 +13,8 @@ export class ReviewService {
     getReviews() {
         return this._http.get(`${Api_Url}/api/Review`, {headers: this.getHeaders () });
     }
-    getReviewsById() {
-        return this._http.get(`${Api_Url}/api/Review/{id}`, {headers: this.getHeaders () });
+    getReviewsById(id: string) {
+        return this._http.get(`${Api_Url}/api/Review/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
     postReviews() {
         return this._http.post(`${Api_Url}/api/Review`, {headers: this.getHeaders () });
@@ -22,8 +22,8 @@ export class ReviewService {
     putReviews() {
         return this._http.put(`${Api_Url}/api/Review`, {headers: this.getHeaders () });
     }
-    deleteReviews() {
-        return this._http.delete(`${Api_Url}/api/Review/{id}`, {headers: this.getHeaders () });
+    deleteReviews(id: string) {
+        return this._http.delete(`${Api_Url}/api/Review/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
 
     private getHeaders(): HttpHeaders {

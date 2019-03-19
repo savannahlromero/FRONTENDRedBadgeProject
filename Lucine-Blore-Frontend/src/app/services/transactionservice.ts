@@ -13,8 +13,8 @@ export class TransactionService {
     getTransactions() {
         return this._http.get(`${Api_Url}/api/Transaction`, {headers: this.getHeaders () });
     }
-    getTransactionsById() {
-        return this._http.get(`${Api_Url}/api/Transaction/{id}`, {headers: this.getHeaders () });
+    getTransactionsById(id: string) {
+        return this._http.get(`${Api_Url}/api/Transaction/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
     postTransactions() {
         return this._http.post(`${Api_Url}/api/Transaction`, {headers: this.getHeaders () });
