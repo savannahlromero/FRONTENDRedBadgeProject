@@ -7,7 +7,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { 
 MatToolbarModule,
 MatFormFieldModule,
-MatInputModule 
+MatInputModule, 
+MatTableModule
 } from '@angular/material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -80,6 +81,7 @@ const routes = [
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
     BrowserAnimationsModule,
   ],
   providers: [
