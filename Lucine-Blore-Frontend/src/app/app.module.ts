@@ -39,8 +39,13 @@ import { VenueService } from './services/venueservice';
 const routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: '**', component: RegisterComponent}
-
+  {
+    path: 'venues', children: [
+    {path: '', component: VenueHomeListallComponent},
+    {path: 'create', component: VenueCreateComponent}
+  ] 
+},
+{path: '**', component: RegisterComponent},
 ];
 
 @NgModule({
@@ -82,7 +87,6 @@ const routes = [
     ReviewService,
     TransactionService,
     VenueService
-
   ],
   bootstrap: [AppComponent]
 })

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Token } from '../models/token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
+import {VenueCreate} from '../models/venuecreatemodel';
 
 const Api_Url = 'https://lucineandbloreluxuryvenues.azurewebsites.net/'
 
@@ -16,8 +17,8 @@ export class VenueService {
     getVenuesById() {
         return this._http.get(`${Api_Url}/api/Venues/{id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
-    postVenues() {
-        return this._http.post(`${Api_Url}/api/Venues`, {headers: this.getHeaders () });
+    postVenues(venue: VenueCreate) {
+        return this._http.post(`${Api_Url}/api/Venues`, venue, {headers: this.getHeaders () });
     }
     putVenues() {
         return this._http.put(`${Api_Url}/api/Venues`, {headers: this.getHeaders () });
