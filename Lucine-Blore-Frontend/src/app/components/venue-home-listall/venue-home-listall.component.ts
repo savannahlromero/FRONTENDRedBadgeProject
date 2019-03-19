@@ -9,9 +9,9 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./venue-home-listall.component.css']
 })
 export class VenueHomeListallComponent implements OnInit {
-  columnNames = ['VenueName', 'VenueDescription', 'VenueLocation', 'VenueCapacity', 'VenueCost'];
-  dataSource: MatTableDataSource<VenueCreate>
   constructor(private _venueService: VenueService) { }
+  columnNames = ['details','VenueID','VenueName', 'VenueDescription', 'VenueLocation', 'VenueCapacity', 'VenueCost', 'buttons'];
+  dataSource: MatTableDataSource<VenueCreate>
 
   ngOnInit() {
     this._venueService.getVenues().subscribe((venues: VenueCreate[]) => {

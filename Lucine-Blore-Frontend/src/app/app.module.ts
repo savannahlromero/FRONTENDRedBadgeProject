@@ -43,7 +43,8 @@ const routes = [
   {
     path: 'venues', children: [
     {path: '', component: VenueHomeListallComponent},
-    {path: 'create', component: VenueCreateComponent}
+    {path: 'create', component: VenueCreateComponent},
+    {path: 'detail/:id', component: VenueDetailsComponent}
   ] 
 },
 {path: '**', component: RegisterComponent},

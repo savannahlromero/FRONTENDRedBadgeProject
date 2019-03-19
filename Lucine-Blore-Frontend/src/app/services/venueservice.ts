@@ -14,8 +14,8 @@ export class VenueService {
     getVenues() {
         return this._http.get(`${Api_Url}/api/Venues`, {headers: this.getHeaders () });
     }
-    getVenuesById() {
-        return this._http.get(`${Api_Url}/api/Venues/{id}`, {headers: this.getHeaders () });
+    getVenuesById(id: string) {
+        return this._http.get(`${Api_Url}/api/Venues/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
     postVenues(venue: VenueCreate) {
         return this._http.post(`${Api_Url}/api/Venues`, venue, {headers: this.getHeaders () });
@@ -23,8 +23,8 @@ export class VenueService {
     putVenues() {
         return this._http.put(`${Api_Url}/api/Venues`, {headers: this.getHeaders () });
     }
-    deleteVenues() {
-        return this._http.delete(`${Api_Url}/api/Venues/{id}`, {headers: this.getHeaders () });
+    deleteVenues(id: string) {
+        return this._http.delete(`${Api_Url}/api/Venues/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
 
     private getHeaders(): HttpHeaders {
