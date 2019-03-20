@@ -1,3 +1,35 @@
-<p>
-  venue-edit works!
-</p>
+<h1>Update a Venue</h1>
+<hr>
+
+<form *ngIf="editVenueForm" #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editVenueForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue Name" formControlName="VenueName" type="VenueName" required [value]="venue.VenueName"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue Description" formControlName="VenueDescription" type="VenueDescription" required [value]="venue.VenueDescription"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue Location" formControlName="VenueLocation" type="VenueLocation" required [value]="venue.VenueLocation"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue Capacity" formControlName="VenueCapacity" type="VenueCapacity" required [value]="venue.VenueCapacity"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue Cost" formControlName="VenueCost" type="VenueCost" required [value]="venue.VenueCost"/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
+</form>
+<br>
+<a routerLink="/venues">Back to List</a>
