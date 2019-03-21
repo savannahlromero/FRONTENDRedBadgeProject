@@ -10,15 +10,16 @@ import { Router } from '@angular/router';
 })
 export class TransactionCreateComponent implements OnInit {
 
+  show: boolean = true;
+
   transactionCreateForm: FormGroup;
 
   constructor( private _transactionService: TransactionService, private _form: FormBuilder, private _router: Router) {
-    this.createForm
-    console.log("AH");
+ 
     }
 
   ngOnInit() {
-
+    this.createForm();
   }
 
   createForm(){
