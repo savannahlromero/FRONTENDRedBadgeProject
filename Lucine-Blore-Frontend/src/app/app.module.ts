@@ -46,6 +46,7 @@ const routes = [
     {path: 'create', component: VenueCreateComponent},
     {path: 'detail/:id', component: VenueDetailsComponent},
     {path: 'edit/:id', component: VenueEditComponent},
+    {path: 'delete/:id', component: VenueDeleteComponent},
   ] 
 },
 {path: '**', component: RegisterComponent},

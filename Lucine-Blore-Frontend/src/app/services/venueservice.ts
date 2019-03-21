@@ -23,7 +23,7 @@ export class VenueService {
     putVenues(venue: VenueCreate) {
         return this._http.put(`${Api_Url}/api/Venues`, venue, {headers: this.getHeaders () });
     }
-    deleteVenues(id: string) {
+    deleteVenues(id: number) {
         return this._http.delete(`${Api_Url}/api/Venues/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
 
