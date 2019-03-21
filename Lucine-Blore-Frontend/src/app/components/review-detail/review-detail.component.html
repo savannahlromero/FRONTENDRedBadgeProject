@@ -1,3 +1,24 @@
-<p>
-  review-detail works!
-</p>
+<h1> Details</h1>
+
+<hr>
+<div *ngIf="review">
+  <div>
+    <label for="">Review #: </label>
+    <span>{{review.ReviewID}}</span>
+  </div>
+  <div>
+      <label for="">Venue #: </label>
+      <span>{{review.VenueID}}</span>
+  </div>
+  <div>
+      <label for="">Venue Rating: </label>
+      <span>{{review.VenueRating}}</span>
+  </div>
+  <div>
+      <label for="">Comments: </label>
+      <span>{{review.Comments}}</span>
+  </div>
+</div>
+
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/reviews">Back to List</button>

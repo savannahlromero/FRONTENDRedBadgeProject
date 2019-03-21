@@ -5,5 +5,5 @@ export interface ReviewCreate{
     VenueID: number;
     ApplicationUserID?: string;
     VenueRating: number;
-    Comments: String;
+    Comments: string;
 }
