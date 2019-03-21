@@ -20,10 +20,10 @@ export class VenueService {
     postVenues(venue: VenueCreate) {
         return this._http.post(`${Api_Url}/api/Venues`, venue, {headers: this.getHeaders () });
     }
-    putVenues() {
-        return this._http.put(`${Api_Url}/api/Venues`, {headers: this.getHeaders () });
+    putVenues(venue: VenueCreate) {
+        return this._http.put(`${Api_Url}/api/Venues`, venue, {headers: this.getHeaders () });
     }
-    deleteVenues(id: string) {
+    deleteVenues(id: number) {
         return this._http.delete(`${Api_Url}/api/Venues/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to be corrected and not {id} <-- that//
 

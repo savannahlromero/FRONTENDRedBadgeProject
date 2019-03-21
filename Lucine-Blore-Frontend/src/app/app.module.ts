@@ -36,25 +36,28 @@ import { HeaderComponent } from './components/header/header.component';
 import { ReviewService } from './services/reviewservice';
 import { TransactionService } from './services/transactionservice';
 import { VenueService } from './services/venueservice';
+import { ReviewCreateComponent } from './/components/review-create/review-create.component';
 
 const routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   {
     path: 'venues', children: [
-      { path: '', component: VenueHomeListallComponent },
-      { path: 'create', component: VenueCreateComponent },
-      { path: 'detail/:id', component: VenueDetailsComponent }
-    ]
-  },
-  {
-    path: 'transactions', children: [
-      { path: '', component: TransactionHomeListallComponent },
-      { path: 'create', component: TransactionCreateComponent },
-      { path: 'detail/:id', component: TransactionDetailComponent }
-    ]
-  },
-  { path: '**', component: RegisterComponent },
+    {path: '', component: VenueHomeListallComponent},
+    {path: 'create', component: VenueCreateComponent},
+    {path: 'detail/:id', component: VenueDetailsComponent},
+    {path: 'edit/:id', component: VenueEditComponent},
+    {path: 'delete/:id', component: VenueDeleteComponent},
+  ] 
+},
+{
+ path: 'transactions', children: [
+   { path: '', component: TransactionHomeListallComponent },
+   { path: 'create', component: TransactionCreateComponent },
+   { path: 'detail/:id', component: TransactionDetailComponent }
+ ]
+},
+{path: '**', component: RegisterComponent},
 ];
 
 @NgModule({
@@ -77,7 +80,8 @@ const routes = [
     VenueDetailsComponent,
     VenueEditComponent,
     VenueHomeListallComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReviewCreateComponent
   ],
   imports: [
     BrowserModule,
