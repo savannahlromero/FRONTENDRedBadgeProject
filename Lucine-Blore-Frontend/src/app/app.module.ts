@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'; 
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { 
-MatToolbarModule,
-MatFormFieldModule,
-MatInputModule, 
-MatTableModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatToolbarModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTableModule
 } from '@angular/material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -39,8 +39,8 @@ import { VenueService } from './services/venueservice';
 import { ReviewCreateComponent } from './/components/review-create/review-create.component';
 
 const routes = [
-  {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: 'venues', children: [
     {path: '', component: VenueHomeListallComponent},
@@ -50,16 +50,14 @@ const routes = [
     {path: 'delete/:id', component: VenueDeleteComponent},
   ] 
 },
+{
+ path: 'transactions', children: [
+   { path: '', component: TransactionHomeListallComponent },
+   { path: 'create', component: TransactionCreateComponent },
+   { path: 'detail/:id', component: TransactionDetailComponent }
+ ]
+},
 {path: '**', component: RegisterComponent},
-{path: 'transactions/create', component: TransactionCreateComponent}, 
-
-// {
-//   path: 'transactions', children: [
-//     {path: '', component: TransactionHomeListallComponent},
-//     {path: 'create', component: TransactionCreateComponent},
-//     {path: 'detail/:id', component: TransactionDetailComponent}
-//   ]
-// },
 ];
 
 @NgModule({

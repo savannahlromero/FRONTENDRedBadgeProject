@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TransactionCreate } from 'src/app/models/transactioncreatemodel';
+import { ActivatedRoute } from '@angular/router';
+import { TransactionService } from 'src/app/services/transactionservice';
 
 @Component({
   selector: 'app-transaction-detail',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionDetailComponent implements OnInit {
 
-  constructor() { }
+  transaction: TransactionCreate
+
+  constructor(private _activatedRoute: ActivatedRoute, private _transactionService: TransactionService) { }
 
   ngOnInit() {
+    this._activatedRoute.paramMap.subscribe(routeData => {
+      this._transactionService.getTransactionsById(routeData.get('id')).subscribe((singleTransaction: TransactionCreate) => {
+        this.transaction = singleTransaction;
+      });
+    })
   }
-
+  
 }
