@@ -1,13 +1,8 @@
 <h1>Transactions</h1>
 <hr>
 
-<form *ngIf="transactionCreateForm" #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="transactionCreateForm">
+<form *ngIf = "transactionCreateForm"[formGroup]="transactionCreateForm"[formGroup] #f="ngForm" (ngSubmit)="onSubmit(f)">
   <div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="Transaction ID" formControlName="TransactionID" required/>
-      </mat-form-field>
-    </div>
     <div>
       <mat-form-field>
         <input matInput placeholder="User ID" formControlName="UserID" required/>
@@ -28,3 +23,4 @@
 </form>
 <br>
 <a routerLink="/transactions/create">Back to List</a>
+
