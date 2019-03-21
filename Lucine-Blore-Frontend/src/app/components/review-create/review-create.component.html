@@ -1,3 +1,25 @@
-<p>
-  review-create works!
-</p>
+<h1>Create a Review</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="reviewCreateForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue #" formControlName="VenueID" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue Rating" formControlName="VenueRating" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Comments" formControlName="Comments" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Review</button>
+</form>
+<br>
+<a routerLink="/reviews">Back to List</a>

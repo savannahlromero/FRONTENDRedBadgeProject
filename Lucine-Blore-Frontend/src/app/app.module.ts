@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'; 
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { 
-MatToolbarModule,
-MatFormFieldModule,
-MatInputModule, 
-MatTableModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatToolbarModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTableModule
 } from '@angular/material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -39,18 +39,27 @@ import { VenueService } from './services/venueservice';
 import { ReviewCreateComponent } from './/components/review-create/review-create.component';
 
 const routes = [
-  {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: 'venues', children: [
-    {path: '', component: VenueHomeListallComponent},
-    {path: 'create', component: VenueCreateComponent},
-    {path: 'detail/:id', component: VenueDetailsComponent},
-    {path: 'edit/:id', component: VenueEditComponent},
-    {path: 'delete/:id', component: VenueDeleteComponent},
-  ] 
-},
-{path: '**', component: RegisterComponent},
+      { path: '', component: VenueHomeListallComponent },
+      { path: 'create', component: VenueCreateComponent },
+      { path: 'detail/:id', component: VenueDetailsComponent },
+      { path: 'edit/:id', component: VenueEditComponent },
+      { path: 'delete/:id', component: VenueDeleteComponent },
+    ]
+  },
+  {
+    path: 'reviews', children:[
+      {path: '', component: ReviewHomeListallComponent},
+      {path: 'create', component: ReviewCreateComponent},
+      {path: 'detail/:id', component: ReviewDetailComponent},
+      {path: 'edit/:id', component: ReviewEditComponent},
+      {path: 'delete/:id', component: ReviewDeleteComponent},
+    ]
+  },
+  { path: '**', component: RegisterComponent },
 ];
 
 @NgModule({
