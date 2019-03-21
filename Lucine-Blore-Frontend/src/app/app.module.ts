@@ -43,21 +43,30 @@ const routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'venues', children: [
-    {path: '', component: VenueHomeListallComponent},
-    {path: 'create', component: VenueCreateComponent},
-    {path: 'detail/:id', component: VenueDetailsComponent},
-    {path: 'edit/:id', component: VenueEditComponent},
-    {path: 'delete/:id', component: VenueDeleteComponent},
-  ] 
-},
-{
- path: 'transactions', children: [
-   { path: '', component: TransactionHomeListallComponent },
-   { path: 'create', component: TransactionCreateComponent },
-   { path: 'detail/:id', component: TransactionDetailComponent }
- ]
-},
-{path: '**', component: RegisterComponent},
+      { path: '', component: VenueHomeListallComponent },
+      { path: 'create', component: VenueCreateComponent },
+      { path: 'detail/:id', component: VenueDetailsComponent },
+      { path: 'edit/:id', component: VenueEditComponent },
+      { path: 'delete/:id', component: VenueDeleteComponent },
+    ]
+  },
+  {
+    path: 'transactions', children: [
+      { path: '', component: TransactionHomeListallComponent },
+      { path: 'create', component: TransactionCreateComponent },
+      { path: 'detail/:id', component: TransactionDetailComponent }
+    ]
+   },
+  {
+    path: 'reviews', children:[
+      {path: '', component: ReviewHomeListallComponent},
+      {path: 'create', component: ReviewCreateComponent},
+      {path: 'detail/:id', component: ReviewDetailComponent},
+      {path: 'edit/:id', component: ReviewEditComponent},
+      {path: 'delete/:id', component: ReviewDeleteComponent},
+    ]
+  },
+  { path: '**', component: RegisterComponent },
 ];
 
 @NgModule({
