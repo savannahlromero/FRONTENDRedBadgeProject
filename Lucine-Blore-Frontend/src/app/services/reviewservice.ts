@@ -20,10 +20,10 @@ export class ReviewService {
     postReviews(review: ReviewCreate) {
         return this._http.post(`${Api_Url}/api/Review`, review, {headers: this.getHeaders () });
     }
-    putReviews() {
-        return this._http.put(`${Api_Url}/api/Review`, {headers: this.getHeaders () });
+    putReviews(review: ReviewCreate) {
+        return this._http.put(`${Api_Url}/api/Review`, review, {headers: this.getHeaders () });
     }
-    deleteReviews(id: string) {
+    deleteReviews(id: number) {
         return this._http.delete(`${Api_Url}/api/Review/${id}`, {headers: this.getHeaders () });
     }   //GetById needs to to corrected and not {id} <-- that//
 

@@ -1,3 +1,25 @@
-<p>
-  review-edit works!
-</p>
+<h1>Update Review</h1>
+<hr>
+
+<form *ngIf="editReviewForm" #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editReviewForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="VenueID" formControlName="VenueID" type="VenueID" required [value]="review.VenueID"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Venue Rating" formControlName="VenueRating" type="VenueRating" required [value]="review.VenueRating"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Comments" formControlName="Comments" type="Comments" required [value]="review.Comments"/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
+</form>
+<br>
+<a routerLink="/reviews">Back to List</a>

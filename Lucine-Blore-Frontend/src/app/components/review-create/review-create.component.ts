@@ -27,7 +27,7 @@ export class ReviewCreateComponent implements OnInit {
   }
   onSubmit(){
     this._reviewService.postReviews(this.reviewCreateForm.value).subscribe(data => {
-      this._router.navigate(['/venues']);
+      this._router.navigate(['/reviews']);
     });
   }
 
