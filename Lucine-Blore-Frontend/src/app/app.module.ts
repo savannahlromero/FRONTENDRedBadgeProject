@@ -44,10 +44,19 @@ const routes = [
     path: 'venues', children: [
     {path: '', component: VenueHomeListallComponent},
     {path: 'create', component: VenueCreateComponent},
-    {path: 'detail/:id', component: VenueDetailsComponent}
+    {path: 'detail/:id', component: VenueDetailsComponent} 
   ] 
 },
 {path: '**', component: RegisterComponent},
+{path: 'transactions/create', component: TransactionCreateComponent}, 
+
+// {
+//   path: 'transactions', children: [
+//     {path: '', component: TransactionHomeListallComponent},
+//     {path: 'create', component: TransactionCreateComponent},
+//     {path: 'detail/:id', component: TransactionDetailComponent}
+//   ]
+// },
 ];
 
 @NgModule({

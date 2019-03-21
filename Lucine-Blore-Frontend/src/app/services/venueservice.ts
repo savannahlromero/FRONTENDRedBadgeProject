@@ -25,7 +25,7 @@ export class VenueService {
     }
     deleteVenues(id: string) {
         return this._http.delete(`${Api_Url}/api/Venues/${id}`, {headers: this.getHeaders () });
-    }   //GetById needs to to corrected and not {id} <-- that//
+    }   //GetById needs to be corrected and not {id} <-- that//
 
     private getHeaders(): HttpHeaders {
         return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
