@@ -51,6 +51,15 @@ const routes = [
   ] 
 },
 {path: '**', component: RegisterComponent},
+{path: 'transactions/create', component: TransactionCreateComponent}, 
+
+// {
+//   path: 'transactions', children: [
+//     {path: '', component: TransactionHomeListallComponent},
+//     {path: 'create', component: TransactionCreateComponent},
+//     {path: 'detail/:id', component: TransactionDetailComponent}
+//   ]
+// },
 ];
 
 @NgModule({
