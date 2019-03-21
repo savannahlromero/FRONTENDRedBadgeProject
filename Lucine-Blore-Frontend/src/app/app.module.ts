@@ -50,6 +50,13 @@ const routes = [
       { path: 'delete/:id', component: VenueDeleteComponent },
     ]
   },
+
+
+
+
+
+
+
   {
     path: 'reviews', children:[
       {path: '', component: ReviewHomeListallComponent},
