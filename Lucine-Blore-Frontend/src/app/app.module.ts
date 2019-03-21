@@ -36,6 +36,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ReviewService } from './services/reviewservice';
 import { TransactionService } from './services/transactionservice';
 import { VenueService } from './services/venueservice';
+import { ReviewCreateComponent } from './/components/review-create/review-create.component';
 
 const routes = [
   {path: 'register', component: RegisterComponent},
@@ -44,7 +45,9 @@ const routes = [
     path: 'venues', children: [
     {path: '', component: VenueHomeListallComponent},
     {path: 'create', component: VenueCreateComponent},
-    {path: 'detail/:id', component: VenueDetailsComponent} 
+    {path: 'detail/:id', component: VenueDetailsComponent},
+    {path: 'edit/:id', component: VenueEditComponent},
+    {path: 'delete/:id', component: VenueDeleteComponent},
   ] 
 },
 {path: '**', component: RegisterComponent},
@@ -79,7 +82,8 @@ const routes = [
     VenueDetailsComponent,
     VenueEditComponent,
     VenueHomeListallComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReviewCreateComponent
   ],
   imports: [
     BrowserModule,
