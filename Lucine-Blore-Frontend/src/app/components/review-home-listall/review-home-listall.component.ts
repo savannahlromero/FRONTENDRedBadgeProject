@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReviewService} from '../../services/reviewservice';
-import { ReviewCreate } from '../../models/reviewcreatemodel';
+import { ReviewDetails } from '../../models/reviewdetailmodel';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
@@ -10,12 +10,12 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class ReviewHomeListallComponent implements OnInit {
   constructor(private _reviewService: ReviewService) { }
-  columnNames = ['details','ReviewID','VenueID', 'VenueRating', 'Comments', 'buttons'];
-  dataSource: MatTableDataSource<ReviewCreate>
+  columnNames = ['details','ReviewID', 'VenueName', 'VenueRating', 'Comments', 'buttons'];
+  dataSource: MatTableDataSource<ReviewDetails>
 
   ngOnInit() {
-    this._reviewService.getReviews().subscribe((reviews: ReviewCreate[]) => {
-      this.dataSource = new MatTableDataSource<ReviewCreate>(reviews);
+    this._reviewService.getReviews().subscribe((reviews: ReviewDetails[]) => {
+      this.dataSource = new MatTableDataSource<ReviewDetails>(reviews);
     });
   }
 

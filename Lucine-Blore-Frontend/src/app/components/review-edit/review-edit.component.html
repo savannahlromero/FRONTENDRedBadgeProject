@@ -5,7 +5,12 @@
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="VenueID" formControlName="VenueID" type="VenueID" required [value]="review.VenueID"/>
+        <mat-label>Select Venue</mat-label>
+        <mat-select formControlName="VenueID">
+          <mat-option *ngFor="let venue of venues" [value]="venue.VenueID">
+            {{venue.VenueName}}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
     <div>
