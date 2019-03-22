@@ -4,6 +4,7 @@ import { Token } from '../models/token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { ReviewCreate } from '../models/reviewcreatemodel';
+import { ReviewDetails } from '../models/reviewdetailmodel';
 
 const Api_Url = 'https://lucineandbloreluxuryvenues.azurewebsites.net/'
 
@@ -20,7 +21,7 @@ export class ReviewService {
     postReviews(review: ReviewCreate) {
         return this._http.post(`${Api_Url}/api/Review`, review, {headers: this.getHeaders () });
     }
-    putReviews(review: ReviewCreate) {
+    putReviews(review: ReviewDetails) {
         return this._http.put(`${Api_Url}/api/Review`, review, {headers: this.getHeaders () });
     }
     deleteReviews(id: number) {

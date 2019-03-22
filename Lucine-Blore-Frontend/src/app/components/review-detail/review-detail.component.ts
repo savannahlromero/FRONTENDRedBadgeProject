@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { ReviewService} from '../../services/reviewservice';
-import { ReviewCreate } from '../../models/reviewcreatemodel';
+import { ReviewDetails } from '../../models/reviewdetailmodel';
 
 @Component({
   selector: 'app-review-detail',
@@ -10,13 +10,13 @@ import { ReviewCreate } from '../../models/reviewcreatemodel';
 })
 export class ReviewDetailComponent implements OnInit {2
 
-  review: ReviewCreate;
+  review: ReviewDetails;
 
   constructor(private _activatedRoute: ActivatedRoute, private _reviewService: ReviewService) { }
 
   ngOnInit() {
     this._activatedRoute.paramMap.subscribe(routeData => {
-      this._reviewService.getReviewsById(routeData.get('id')).subscribe((singleReview: ReviewCreate) => {
+      this._reviewService.getReviewsById(routeData.get('id')).subscribe((singleReview: ReviewDetails) => {
         this.review = singleReview;
       });
     })

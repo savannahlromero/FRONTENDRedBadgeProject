@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ReviewService} from '../../services/reviewservice';
 import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
+import { VenueService } from '../../services/venueservice';
+import { VenueCreate } from '../../models/venuecreatemodel';
 
 @Component({
   selector: 'app-review-create',
@@ -10,12 +12,14 @@ import {Router} from '@angular/router';
 })
 export class ReviewCreateComponent implements OnInit {
   reviewCreateForm: FormGroup;
+  venues: VenueCreate[];
 
-  constructor(private _form: FormBuilder, private _reviewService: ReviewService, private _router: Router) {
+  constructor(private _form: FormBuilder, private _reviewService: ReviewService, private _venueService:VenueService, private _router: Router) {
     this.createForm();
    }
 
   ngOnInit() {
+    this._venueService.getVenues().subscribe((venues: VenueCreate[]) => this.venues = venues)
   }
 
   createForm(){

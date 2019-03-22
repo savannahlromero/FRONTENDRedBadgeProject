@@ -10,6 +10,7 @@ import {
   MatInputModule,
   MatTableModule
 } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -103,6 +104,7 @@ const routes = [
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatSelectModule,
     BrowserAnimationsModule,
   ],
   providers: [
