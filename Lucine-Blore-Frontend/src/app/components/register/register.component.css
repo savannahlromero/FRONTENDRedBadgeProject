@@ -1,0 +1,19 @@
+  .text-center {
+    text-align: center;
+  }
+  h1 {
+    color: white;
+    font-size: 50px;
+    margin-top: 3vh;
+    padding: 10px;
+    background: transparent;
+  }
+  h2 {
+    color: white;
+    font-size: 14px;
+    background: transparent;
+  }
+  h3{
+      color: white;
+      margin-top: 35vh;
+  }
