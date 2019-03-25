@@ -38,8 +38,10 @@ import { ReviewService } from './services/reviewservice';
 import { TransactionService } from './services/transactionservice';
 import { VenueService } from './services/venueservice';
 import { ReviewCreateComponent } from './/components/review-create/review-create.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes = [
+  {path: 'home', component: HomeComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   {
@@ -91,6 +93,7 @@ const routes = [
     VenueEditComponent,
     VenueHomeListallComponent,
     HeaderComponent,
+    FooterComponent,
     ReviewCreateComponent
   ],
   imports: [
