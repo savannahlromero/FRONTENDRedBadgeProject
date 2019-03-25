@@ -26,6 +26,7 @@ import { ReviewEditComponent } from './/components/review-edit/review-edit.compo
 import { ReviewHomeListallComponent } from './/components/review-home-listall/review-home-listall.component';
 import { TransactionCreateComponent } from './/components/transaction-create/transaction-create.component';
 import { TransactionDetailComponent } from './/components/transaction-detail/transaction-detail.component';
+import { TransactionEditComponent } from './/components/transaction-edit/transaction-edit.component';
 import { TransactionHomeListallComponent } from './/components/transaction-home-listall/transaction-home-listall.component';
 import { VenueCreateComponent } from './/components/venue-create/venue-create.component';
 import { VenueDeleteComponent } from './/components/venue-delete/venue-delete.component';
@@ -38,9 +39,10 @@ import { ReviewService } from './services/reviewservice';
 import { TransactionService } from './services/transactionservice';
 import { VenueService } from './services/venueservice';
 import { ReviewCreateComponent } from './/components/review-create/review-create.component';
-import { TransactionEditComponent } from './/components/transaction-edit/transaction-edit.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes = [
+  {path: 'home', component: HomeComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   {
@@ -86,6 +88,7 @@ const routes = [
     ReviewHomeListallComponent,
     TransactionCreateComponent,
     TransactionDetailComponent,
+    TransactionEditComponent,
     TransactionHomeListallComponent,
     VenueCreateComponent,
     VenueDeleteComponent,
@@ -94,7 +97,7 @@ const routes = [
     VenueHomeListallComponent,
     HeaderComponent,
     ReviewCreateComponent,
-    TransactionEditComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

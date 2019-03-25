@@ -1,1 +1,7 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+body{
+    background-image: url('../src/assets/RB_blackmarble_mercury.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+

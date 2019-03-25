@@ -2,6 +2,12 @@
     flex: 1 1 auto;
 }
 .nav-btn{
-    margin-right: 0.5em;
-    background-color: lavender;
+    margin-right: 1em;
+    background-color: transparent;
+} 
+h1{
+    margin-left: 1em;
+}
+h2{
+    margin-right: 22em;
 }
