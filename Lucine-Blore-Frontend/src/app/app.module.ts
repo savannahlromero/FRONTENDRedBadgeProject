@@ -38,6 +38,7 @@ import { ReviewService } from './services/reviewservice';
 import { TransactionService } from './services/transactionservice';
 import { VenueService } from './services/venueservice';
 import { ReviewCreateComponent } from './/components/review-create/review-create.component';
+import { TransactionEditComponent } from './/components/transaction-edit/transaction-edit.component';
 
 const routes = [
   { path: 'register', component: RegisterComponent },
@@ -55,7 +56,8 @@ const routes = [
     path: 'transactions', children: [
       { path: '', component: TransactionHomeListallComponent },
       { path: 'create', component: TransactionCreateComponent },
-      { path: 'detail/:id', component: TransactionDetailComponent }
+      { path: 'detail/:id', component: TransactionDetailComponent },
+      { path: 'edit/:id', component: TransactionEditComponent },
     ]
    },
   {
@@ -91,7 +93,8 @@ const routes = [
     VenueEditComponent,
     VenueHomeListallComponent,
     HeaderComponent,
-    ReviewCreateComponent
+    ReviewCreateComponent,
+    TransactionEditComponent
   ],
   imports: [
     BrowserModule,
