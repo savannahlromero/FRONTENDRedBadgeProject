@@ -26,6 +26,7 @@ import { ReviewEditComponent } from './/components/review-edit/review-edit.compo
 import { ReviewHomeListallComponent } from './/components/review-home-listall/review-home-listall.component';
 import { TransactionCreateComponent } from './/components/transaction-create/transaction-create.component';
 import { TransactionDetailComponent } from './/components/transaction-detail/transaction-detail.component';
+import { TransactionEditComponent } from './/components/transaction-edit/transaction-edit.component';
 import { TransactionHomeListallComponent } from './/components/transaction-home-listall/transaction-home-listall.component';
 import { VenueCreateComponent } from './/components/venue-create/venue-create.component';
 import { VenueDeleteComponent } from './/components/venue-delete/venue-delete.component';
@@ -57,7 +58,8 @@ const routes = [
     path: 'transactions', children: [
       { path: '', component: TransactionHomeListallComponent },
       { path: 'create', component: TransactionCreateComponent },
-      { path: 'detail/:id', component: TransactionDetailComponent }
+      { path: 'detail/:id', component: TransactionDetailComponent },
+      { path: 'edit/:id', component: TransactionEditComponent },
     ]
    },
   {
@@ -86,6 +88,7 @@ const routes = [
     ReviewHomeListallComponent,
     TransactionCreateComponent,
     TransactionDetailComponent,
+    TransactionEditComponent,
     TransactionHomeListallComponent,
     VenueCreateComponent,
     VenueDeleteComponent,
@@ -93,8 +96,8 @@ const routes = [
     VenueEditComponent,
     VenueHomeListallComponent,
     HeaderComponent,
+    ReviewCreateComponent,
     FooterComponent,
-    ReviewCreateComponent
   ],
   imports: [
     BrowserModule,

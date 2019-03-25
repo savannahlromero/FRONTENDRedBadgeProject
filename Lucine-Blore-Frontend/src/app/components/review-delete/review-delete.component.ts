@@ -3,6 +3,7 @@ import { ReviewService } from '../../services/reviewservice';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ReviewCreate } from 'src/app/models/reviewcreatemodel';
+import { ReviewDetails} from '../../models/reviewdetailmodel';
 
 @Component({
   selector: 'app-review-delete',
@@ -11,11 +12,11 @@ import { ReviewCreate } from 'src/app/models/reviewcreatemodel';
 })
 export class ReviewDeleteComponent implements OnInit {
 
-  review: ReviewCreate;
+  review: ReviewDetails;
 
   constructor(private _reviewService: ReviewService, private _ar: ActivatedRoute, private _router: Router) { 
     this._ar.paramMap.subscribe(p => {
-      this._reviewService.getReviewsById(p.get('id')).subscribe((singleReview: ReviewCreate) => {
+      this._reviewService.getReviewsById(p.get('id')).subscribe((singleReview: ReviewDetails) => {
         this.review = singleReview;
       }) 
     })
