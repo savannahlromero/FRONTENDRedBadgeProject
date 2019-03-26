@@ -71,7 +71,7 @@ const routes = [
       {path: 'delete/:id', component: ReviewDeleteComponent},
     ]
   },
-  { path: '**', component: RegisterComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
