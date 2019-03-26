@@ -6,16 +6,24 @@
 }
 .nav-btn{
     margin-right: 1em;
-    background-color: transparent;
+    background-color: #e6be8a;
+    border-radius: 8px;
+    border: transparent;
+    opacity: 1.0;
+    
     height: 3em;
 } 
 h1{
-    margin-left: 1em;
+    margin-left: 2vw;
 }
 h2{
-    margin-right: 21em;
+    margin-right: 71vw;
+    
 }
 .navbar{
     width: wrap;
     height: 12vh;
+}
+.nav-wrapper{
+padding-bottom: 1.5em;
 }

@@ -7,3 +7,26 @@ body{
 p{
     color: white;
 }
+a:link {
+    color: #e6be8a;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #e6be8a;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #DAA520;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #DAA520;
+  }
+
+  .blur-box{
+    background-color: white;
+    box-shadow: 0 0 5px 10px white;
+  }
