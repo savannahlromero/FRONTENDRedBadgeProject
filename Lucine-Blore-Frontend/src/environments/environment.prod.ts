@@ -8,9 +8,9 @@ switch (window.location.hostname) {
     // this is the deployed angular application
     case 'lucine-blore-frontend.herokuapp.com':
         // this is the full url of your deployed API
-        APIURL = 'https://lucineandbloreluxuryvenues.azurewebsites.net/'
+        APIURL = 'https://lucineandbloreluxuryvenues.azurewebsites.net'
         break;
     default:
         // this is the local host name of your API
-        APIURL = 'http://localhost:50976';
+        APIURL = 'https://lucineandbloreluxuryvenues.azurewebsites.net';
 }
