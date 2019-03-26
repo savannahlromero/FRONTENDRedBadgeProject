@@ -1,0 +1,28 @@
+.example-fill-remaining-space{
+    flex: 1 1 auto;
+}
+.home-btn{
+    font-size: 1.2em;
+}
+.nav-btn{
+    margin-right: 1em;
+    background-color: #e6be8a;
+    border-radius: 8px;
+    border: transparent;
+    opacity: 1.0;
+    
+    height: 3em;
+} 
+.reglog{
+    background-color: #C8C8C8;
+}
+.tablebuttons{
+    margin-left: 1vw;
+}
+.navbar{
+    width: wrap;
+    height: 12vh;
+}
+.nav-wrapper{
+padding-bottom: 1.5em;
+}

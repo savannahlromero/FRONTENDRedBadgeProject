@@ -1,0 +1,24 @@
+<h1> Transaction Details</h1>
+
+<hr>
+<div *ngIf="transaction">
+  <div>
+    <label for="">Transaction #: </label>
+    <span>{{transaction.TransactionID}}</span>
+  </div>
+  <div>
+    <label for="">Venue Name: </label>
+    <span>{{transaction.VenueName}}</span>
+</div>
+<div>
+  <label for="">Days Renting: </label>
+  <span>{{transaction.DaysRenting}}</span>
+</div>
+  <div>
+      <label for="">Total Cost: </label>
+      <span>{{transaction.TransactionCost}}</span>
+  </div>
+</div>
+
+<button mat-button class="btn-btn" routerLink="/transactions">Back to List</button>
+

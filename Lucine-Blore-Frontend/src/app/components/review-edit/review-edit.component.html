@@ -1,0 +1,29 @@
+<h1>Update a Review</h1>
+<hr>
+<form *ngIf="editReviewForm" #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editReviewForm">
+  <div>
+    <div class="changeFormColor">
+      <mat-form-field>
+        <mat-label>Select Venue</mat-label>
+        <mat-select formControlName="VenueID">
+          <mat-option *ngFor="let venue of venues" [value]="venue.VenueID">
+            {{venue.VenueName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input class="whatever" matInput placeholder="Venue Rating" formControlName="VenueRating" type="VenueRating" required [value]="review.VenueRating"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Comments" formControlName="Comments" type="Comments" required [value]="review.Comments"/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn btn-btn" type="submit">Save</button>
+</form>
+<br>
+<a routerLink="/reviews">Back to List</a>

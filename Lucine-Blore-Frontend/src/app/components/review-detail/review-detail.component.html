@@ -1,0 +1,27 @@
+<h1> Review Details</h1>
+
+<hr>
+<div *ngIf="review">
+  <div>
+    <label for="">Review #: </label>
+    <span>{{review.ReviewID}}</span>
+  </div>
+  <div>
+    <label for="">Venue Name: </label>
+    <span>{{review.VenueName}}</span>
+</div>
+<div>
+  <label for="">Venue Description: </label>
+  <span>{{review.VenueDescription}}</span>
+</div>
+  <div>
+      <label for="">Venue Rating: </label>
+      <span>{{review.VenueRating}}</span>
+  </div>
+  <div>
+      <label for="">Comments: </label>
+      <span>{{review.Comments}}</span>
+  </div>
+</div>
+
+<button mat-button class="btn-btn" routerLink="/reviews">Back to List</button>

@@ -1,0 +1,61 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+body{
+    background-image: url('../src/assets/RB_blackmarble_mercury.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+p{
+    color: white;
+}
+a:link {
+    color: #e6be8a;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #e6be8a;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #DAA520;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #DAA520;
+  }
+
+  .blur-box{
+    background-color: white;
+    box-shadow: 0 0 5px 10px white;
+  }
+  .btn-btn{
+    margin-right: 1em;
+    background-color: #C8C8C8;
+    text-align: center;
+    border-radius: 6px;
+    border: transparent;
+    opacity: 1.0;
+    
+    height: 3em;
+} 
+.btn-btn2{
+    margin-right: 1em;
+    background-color: #e6be8a;
+    text-align: center;
+    border-radius: 6px;
+    border: transparent;
+    opacity: 1.0;
+    
+    height: 3em;
+} 
+.mat-form-field-underline {
+    background-color: white;
+}
+.mat-form-field-ripple {
+    background-color: #e6be8a !important;
+}
+.mat-form-field-label, .mat-select-value{
+    color: white !important;
+}

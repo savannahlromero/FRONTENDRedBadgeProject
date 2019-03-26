@@ -1,0 +1,44 @@
+<h1> Reviews </h1>
+<!-- <a button color:"primary">Create New</a> -->
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let review" routerLink="/reviews/detail/{{review.ReviewID}}"> <i class="material-icons">library_books</i></mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ReviewID">
+        <mat-header-cell *matHeaderCellDef> Review # </mat-header-cell>
+        <mat-cell *matCellDef="let review"> {{review.ReviewID}}</mat-cell>
+      </ng-container>
+
+    <ng-container matColumnDef="VenueName">
+      <mat-header-cell *matHeaderCellDef> Venue Name </mat-header-cell>
+      <mat-cell *matCellDef="let review"> {{review.VenueName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="VenueRating">
+      <mat-header-cell *matHeaderCellDef> Venue Rating </mat-header-cell>
+      <mat-cell *matCellDef="let review"> {{review.VenueRating}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Comments">
+      <mat-header-cell *matHeaderCellDef> Comments </mat-header-cell>
+      <mat-cell *matCellDef="let review"> {{review.Comments}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let review"> 
+        <i mat-icon class="material-icons" routerLink="/reviews/edit/{{review.ReviewID}}">edit</i>
+        <i class="material-icons" routerLink="/reviews/delete/{{review.ReviewID}}">delete</i>
+      </mat-cell>
+    </ng-container>
+
+  </mat-table>
+</div>

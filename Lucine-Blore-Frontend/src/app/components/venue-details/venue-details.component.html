@@ -1,0 +1,31 @@
+<h1> Venue Details</h1>
+
+<hr>
+<div *ngIf="venue">
+  <div>
+    <label for="">Venue #: </label>
+    <span>{{venue.VenueID}}</span>
+  </div>
+  <div>
+      <label for="">Venue Name: </label>
+      <span>{{venue.VenueName}}</span>
+  </div>
+  <div>
+      <label for="">Venue Description: </label>
+      <span>{{venue.VenueDescription}}</span>
+  </div>
+  <div>
+      <label for="">Venue Location: </label>
+      <span>{{venue.VenueLocation}}</span>
+  </div>
+  <div>
+      <label for="">Venue Capacity: </label>
+      <span>{{venue.VenueCapacity}}</span>
+  </div>
+  <div>
+      <label for="">Venue Cost: </label>
+      <span>{{venue.VenueCost}}</span>
+  </div>
+</div>
+
+<button mat-button class="btn-btn" routerLink="/venues">Back to List</button>
