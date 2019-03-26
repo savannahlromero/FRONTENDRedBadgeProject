@@ -50,3 +50,12 @@ a:link {
     
     height: 3em;
 } 
+.mat-form-field-underline {
+    background-color: white;
+}
+.mat-form-field-ripple {
+    background-color: #e6be8a !important;
+}
+.mat-form-field-label, .mat-select-value{
+    color: white !important;
+}
