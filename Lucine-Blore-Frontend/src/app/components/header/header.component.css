@@ -13,12 +13,11 @@
     
     height: 3em;
 } 
-h1{
-    margin-left: 2vw;
+.reglog{
+    background-color: #C8C8C8;
 }
-h2{
-    margin-right: 71vw;
-    
+.tablebuttons{
+    margin-left: 1vw;
 }
 .navbar{
     width: wrap;
