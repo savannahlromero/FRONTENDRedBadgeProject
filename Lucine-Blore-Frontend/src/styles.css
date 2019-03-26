@@ -30,3 +30,23 @@ a:link {
     background-color: white;
     box-shadow: 0 0 5px 10px white;
   }
+  .btn-btn{
+    margin-right: 1em;
+    background-color: #C8C8C8;
+    text-align: center;
+    border-radius: 6px;
+    border: transparent;
+    opacity: 1.0;
+    
+    height: 3em;
+} 
+.btn-btn2{
+    margin-right: 1em;
+    background-color: #e6be8a;
+    text-align: center;
+    border-radius: 6px;
+    border: transparent;
+    opacity: 1.0;
+    
+    height: 3em;
+} 

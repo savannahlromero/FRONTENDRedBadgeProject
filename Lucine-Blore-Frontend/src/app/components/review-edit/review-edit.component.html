@@ -2,7 +2,7 @@
 <hr>
 <form *ngIf="editReviewForm" #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editReviewForm">
   <div>
-    <div>
+    <div class="changeFormColor">
       <mat-form-field>
         <mat-label>Select Venue</mat-label>
         <mat-select formControlName="VenueID">
@@ -23,7 +23,7 @@
       </mat-form-field>
     </div>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
+  <button mat-raised-button class="nav-btn btn-btn" type="submit">Save</button>
 </form>
 <br>
 <a routerLink="/reviews">Back to List</a>
