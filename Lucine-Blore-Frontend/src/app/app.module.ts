@@ -15,7 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from '../app/Components/about/about.component';
+import { AboutComponent } from '../app/components/about/about.component';
 import { HomeComponent } from './/components/home/home.component';
 import { LoginComponent } from './/components/login/login.component';
 import { ContactComponent } from './/components/contact/contact.component';
