@@ -4,6 +4,9 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+p{
+    color: white;
+}
 a:link {
     color: #e6be8a;
   }
@@ -27,4 +30,3 @@ a:link {
     background-color: white;
     box-shadow: 0 0 5px 10px white;
   }
-
