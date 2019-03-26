@@ -1,15 +1,12 @@
 h1{
     color: #e6be8a;
 }
-.mat-label{
+/* mat-label{
     color: white;
-}
-.mat-select-content{
+} */
+/* mat-select-content{
     color: white;
-}
-.mat-form-field{
-    color: white;
-}
-.changeFormColor h1{
+} */
+mat-form-field{
     color: white;
 }
