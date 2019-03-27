@@ -1,7 +1,17 @@
 h1{
-    color: white;
+    color: #e6be8a;
 }
-p{
+img{
+    margin-top: -120px;
+    margin-right: 100px;
+    border-color: #e6be8a;
+    height: 800px;
+    width: 800px;
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
+}
+body{
     color: white;
     margin-top: 38vh;
+
 }
