@@ -45,6 +45,8 @@ const routes = [
   {path: 'home', component: HomeComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  {path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent},
   {
     path: 'venues', children: [
       { path: '', component: VenueHomeListallComponent },

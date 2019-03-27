@@ -1,8 +1,7 @@
 <h1> Transactions </h1>
-<!-- <a button color:"primary">Create New</a> -->
+<button mat-button class="btn-btn" routerLink = "/transactions/create">Create New</button>
 <hr>
-
-<div>
+<div class="blur-box">
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
