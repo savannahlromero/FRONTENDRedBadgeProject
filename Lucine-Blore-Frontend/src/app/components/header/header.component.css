@@ -1,8 +1,11 @@
 .example-fill-remaining-space{
     flex: 1 1 auto;
 }
-.home-btn{
-    font-size: 1.2em;
+img{
+    height: 60px;
+    width: 60px;
+    -webkit-filter: blur(.5px); /* Safari 6.0 - 9.0 */
+    filter: blur(.5px);
 }
 .nav-btn{
     margin-right: 1em;
@@ -10,7 +13,6 @@
     border-radius: 8px;
     border: transparent;
     opacity: 1.0;
-    
     height: 3em;
 } 
 .reglog{
@@ -20,9 +22,12 @@
     margin-left: 1vw;
 }
 .navbar{
+    color: black;
+    background-color: transparent;
     width: wrap;
-    height: 12vh;
+    height: 8vh;
 }
 .nav-wrapper{
 padding-bottom: 1.5em;
+color: transparent;
 }
