@@ -1,7 +1,7 @@
 <h1> Venues </h1>
 <button mat-button class="btn-btn" routerLink = "/venues/create">Create New</button>
 <hr>
-<div>
+<div class = "blur-box">
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
